@@ -20,6 +20,12 @@ zip_code: SLM 1641
 country: Malta
 phone: (356) 7926 5592
 
+# Plugins
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
 
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages" 
