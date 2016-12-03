@@ -1,0 +1,58 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title-bold: The Pixel Forge
+title-normal: The Pixel Forge
+email: info@thepixelforge.co.uk
+description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://thepixelforge.co.uk" # the base hostname & protocol for your site
+author: The Pixel Forge
+street_address: Bisazza St
+city: Sliema
+state:
+zip_code: SLM 1641
+country: Malta
+phone: (356) 7926 5592
+
+# Plugins
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+
+# Homepage tiles
+tiles-source: posts # accepts "posts" or "pages" 
+tiles-count: 6
+
+# Social settings
+500px_url: 
+facebook_url: https://www.facebook.com/PixelForgeUK/
+github_url: 
+gitlab_url: 
+googleplus_url: 
+instagram_url: 
+linkedin_url: 
+pinterest_url: 
+slack_url: 
+twitter_url: https://twitter.com/PixelForgeUk
+
+# Build settings
+markdown: kramdown
+
+# Plugin: jekyll-seo-tag
+twitter:
+  username: PixelForgeUK
+# Add one or more of the following
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+logo:
+google_site_verification: 
