@@ -6,6 +6,10 @@
 
 /* Spotlights */
 
+.content-light{
+	background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+}
+
 	.spotlights {
 		border-top: 0 !important;
 

@@ -15,19 +15,28 @@
 <!-- Menu -->
 <nav id="menu">
 	<ul class="links">
-        {% for page in site.pages %}
-		    {% if page.layout == "home" %}
-		        <li><a href="{{ page.url | prepend: site.baseurl | remove: "index.html" }}">{{ page.title }}</a></li>
-	    	{% endif %}
+
+		{% for node in site.pages %}
+		
+		    {% if node.layout == "home" %}
+				{% if page.url == node.url %}
+					<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
+				{% else %}
+					<li><a href="{{node.url}}">{{node.title}}</a></li>
+				{% endif %}
+			{% endif %}
 		{% endfor %}
-		{% for page in site.pages %}
-		    {% if page.layout != "home" %}
-		        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-		    {% endif %}
+
+		{% for node in site.pages %}
+		
+		    {% if node.layout != "home" %}
+				{% if page.url == node.url %}
+					<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
+				{% else %}
+					<li><a href="{{node.url}}">{{node.title}}</a></li>
+				{% endif %}
+			{% endif %}
 		{% endfor %}
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
+		
 	</ul>
 </nav>

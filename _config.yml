@@ -9,10 +9,11 @@
 title-bold: The Pixel Forge
 title-normal: The Pixel Forge
 email: info@thepixelforge.co.uk
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thepixelforge.co.uk" # the base hostname & protocol for your site
 author: The Pixel Forge
+building_name: Holland Court
 street_address: Bisazza St
 city: Sliema
 state:
