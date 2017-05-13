@@ -23,6 +23,7 @@ phone: (356) 7926 5592
 
 # Plugins
 gems:
+  - jekyll-admin
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
@@ -35,11 +36,11 @@ tiles-count: 6
 # Social settings
 500px_url: 
 facebook_url: https://www.facebook.com/PixelForgeUK/
-github_url: 
+github_url: http://github.com/anth12
 gitlab_url: 
 googleplus_url: 
 instagram_url: 
-linkedin_url: 
+linkedin_url: https://www.linkedin.com/in/anthonyhalliday/
 pinterest_url: 
 slack_url: 
 twitter_url: https://twitter.com/PixelForgeUk
