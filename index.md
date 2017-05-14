@@ -24,7 +24,9 @@ nav-menu:
 			</h1>
 		</header>
 		<div class="content">
-			<p style="text-transform: uppercase;">{{ site.description }}</p>
+			<p style="text-transform: uppercase;">
+				The Pixel Forge is a Software, Mobile &amp; Web development company creating high performance, robust &amp; versatile solutions
+			</p>
 			<ul class="actions">
 				<li><a href="#main" class="button next scrolly">Read On</a></li>
 			</ul>

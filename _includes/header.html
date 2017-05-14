@@ -28,12 +28,14 @@
 		{% endfor %}
 
 		{% for node in site.pages %}
-		
-		    {% if node.layout != "home" %}
-				{% if page.url == node.url %}
-					<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
-				{% else %}
-					<li><a href="{{node.url}}">{{node.title}}</a></li>
+
+			{% if node.nav-menu %}
+				{% if node.layout != "home" %}
+					{% if page.url == node.url %}
+						<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
+					{% else %}
+						<li><a href="{{node.url}}">{{node.title}}</a></li>
+					{% endif %}
 				{% endif %}
 			{% endif %}
 		{% endfor %}

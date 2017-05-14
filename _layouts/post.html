@@ -19,6 +19,15 @@
 		</header>
 		{% if page.main_image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.main_image }}" alt="" /></span>{% endif %}
 		<p>{{ content }}</p>
+
+		{% if page.github %}
+			<div class="github">
+				<a href="https://github.com/anth12/{{ page.github }}" target="blank" class="button">
+					View on Github
+					<i class="icon fa-github"></i>
+				</a>			
+			</div>
+		{% endif %}
 	</div>
 </section>
 

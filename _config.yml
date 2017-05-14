@@ -9,7 +9,7 @@
 title-bold: The Pixel Forge
 title-normal: The Pixel Forge
 email: info@thepixelforge.co.uk
-description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+description: The Pixel Forge is a Software, Mobile &amp; Web development company creating high performance, robust &amp; versatile solutions
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thepixelforge.co.uk" # the base hostname & protocol for your site
 author: The Pixel Forge
@@ -56,5 +56,5 @@ facebook:
   app_id: 
   publisher: 
   admins: 
-logo:
+logo: assets/images/site-image.jpg
 google_site_verification: 
