@@ -8,7 +8,7 @@ var sass = require('gulp-sass');
 
 
 gulp.task('styles', function(){
-  gulp.src(['assets/sass/**/*.scss'])
+  gulp.src(['assets/scss/**/*.scss'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -23,7 +23,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-  return gulp.src('assets/js/**/*.js')
+  return gulp.src(['assets/js/**/*.js', '!assets/js/**/*.js'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -36,6 +36,6 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('default', function(){
-  gulp.watch("assets/sass/**/*.scss", ['styles']);
+  gulp.watch("assets/scss/**/*.scss", ['styles']);
   gulp.watch("assets/js/**/*.js", ['scripts']);
 });

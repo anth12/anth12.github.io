@@ -1,105 +1,99 @@
-<!-- Contact -->
-<section id="contact">
-	<div class="inner">
-		<section>
-			<form action="https://formspree.io/{{ site.email }}" method="POST">
-				<div class="field half first">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" />
+
+<div class="section section-min">
+	<div class="social">
+		<ul>
+			{% if site.twitter_url %}					
+			<li><a href="{{ site.twitter_url }}" target="_blank"><span class="ti-twitter-alt"></span></a></li>
+			{% endif %}
+			{% if site.googleplus_url %}
+			<li><a href="{{ site.googleplus_url }}" target="_blank"><span class="ti-google-plus"></span></a></li>
+			{% endif %}
+			{% if site.facebook_url %}
+			<li><a href="{{ site.facebook_url }}" target="_blank"><span class="ti-facebook"></span></a></li>
+			{% endif %}
+			{% if site.instagram_url %}
+			<li><a href="{{ site.facebook_url }}" target="_blank"><span class="ti-facebook"></span></a></li>
+			<li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+			{% endif %}
+			{% if site.github_url %}
+			<li><a href="{{ site.github_url }}" target="_blank"><span class="ti-github"></span></a></li>
+			{% endif %}
+			{% if site.slack_url %}
+			<li><a href="{{ site.slack_url }}" target="_blank"><span class="ti-github"></span></a></li>
+			{% endif %}
+			{% if site.linkedin_url %}
+			<li><a href="{{ site.linkedin_url }}" target="_blank"><span class="ti-linkedin"></span></a></li>
+			{% endif %}
+			{% if site.stackoverflow_url %}
+			<li><a href="{{ site.stackoverflow_url }}" target="_blank"><span class="ti-stack-overflow"></span></a></li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+
+<section id="contact" class="contact contact-with-map section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 contact-introduction">
+				<h2 class="text-center">Contact</h2>
+				<!-- <p class="text-center inverse">Lorem ipsum dolor sit amet, consecteturadipisicing elit, sed do eiusmod tempor incididunt ut labore</p> -->
+			</div>
+
+			<div class="col-md-8 col-md-push-2">
+				<div class="contact-data">
+					<ul>
+						<li><span class="ti-mobile icon"></span>{{ site.phone }}</li>
+						<li><span class="ti-email icon"></span>{{ site.email }}</li>
+						<li><span class="ti-skype icon"></span>@{{ site.skype }}</li>
+					</ul>
 				</div>
-				<div class="field half">
-					<label for="email">Email</label>
-					<input type="text" name="_replyto" id="email" />
+
+				<div class="contact-form">
+					<form method="POST" action="https://formspree.io/{{ site.email }}">
+						<div class="form-group">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+						</div>
+
+						<button type="button" id="submit" name="submit" class="btn btn-margin btn-primary btn-lg text-center">Submit your message</button>
+					</form>
 				</div>
-				<div class="field">
-					<label for="message">Message</label>
-					<textarea name="message" id="message" rows="6"></textarea>
-				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" class="special" /></li>
-					<li><input type="reset" value="Clear" /></li>
-				</ul>
-			</form>
-		</section>
-		<section class="split">
-			<section>
-				<div class="contact-method">
-					<span class="icon alt fa-envelope"></span>
-					<h3>Email</h3>
-					<a href="#">{{ site.email }}</a>
-				</div>
-			</section>
-			<section>
-				<div class="contact-method">
-					<span class="icon alt fa-phone"></span>
-					<h3>Phone</h3>
-					<span>{{ site.phone }}</span>
-				</div>
-			</section>
-			<section>
-				<div class="contact-method">
-					<span class="icon alt fa-home"></span>
-					<h3>Address</h3>
-					<span>
-						Holland Court<br /> 
-						{{ site.street_address }}<br />
-						{{ site.city }}, {{ site.state }} {{ site.zip_code }}<br />
-						{{ site.country }}
-					</span>
-				</div>
-			</section>
-		</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="google-maps">
+		<div id="map-canvas"></div>
 	</div>
 </section>
 
-<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				{% if site.twitter_url %}
-				<li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-				{% endif %}
-				{% if site.googleplus_url %}
-				<li><a href="{{ site.googleplus_url }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
-				{% endif %}
-				{% if site.facebook_url %}
-				<li><a href="{{ site.facebook_url }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-				{% endif %}
-				{% if site.instagram_url %}
-				<li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-				{% endif %}
-				{% if site.pinterest_url %}
-				<li><a href="{{ site.pinterest_url }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
-				{% endif %}
-				{% if site.500px_url %}
-				<li><a href="{{ site.500px_url }}" class="icon alt fa-500px" target="_blank"><span class="label">500px</span></a></li>
-				{% endif %}
-				{% if site.gitlab_url %}
-				<li><a href="{{ site.gitlab_url }}" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
-				{% endif %}
-				{% if site.github_url %}
-				<li><a href="{{ site.github_url }}" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-				{% endif %}
-				{% if site.slack_url %}
-				<li><a href="{{ site.slack_url }}" class="icon alt fa-slack" target="_blank"><span class="label">Slack</span></a></li>
-				{% endif %}
-				{% if site.linkedin_url %}
-				<li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-				{% endif %}
-			</ul>
-			<ul class="copyright">
-				<li>&copy; {{ site.title-bold }}</li>
-			</ul>
+<div class="section section-min">
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<img class="footer-logo" src="img/logo.png" alt="footer-logo">
+					<p>&copy; {{ site.time | date: '%Y' }} The Pixel Forge</p>
+				</div>
+			</div>
 		</div>
 	</footer>
-
 </div>
 
+
 <!-- Scripts -->
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.scrolly.min.js"></script>
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jquery.scrollex.min.js"></script>
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/skel.min.js"></script>
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="{{ site.url }}{{ site.baseurl }}/assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="/assets/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/assets/js/vendor/swiper.min.js"></script>
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+<script src="/assets/js/vendor/jquery.countTo.js"></script>
+<script src="/assets/js/vendor/jquery.filterizr.js"></script>
+<script src="/assets/js/vendor/jquery.inview.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDUsyeHfU7zAwORkIJNvmOrH_Zxer7QD4"></script>
+<script src="assets/js/main.js"></script>
+

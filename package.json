@@ -8,12 +8,12 @@
   },
   "author": "the-pixel-forge",
   "devDependencies": {
+    "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-minify-css": "*",
     "gulp-plumber": "*",
     "gulp-rename": "*",
-    "gulp-sass": "*",
-    "gulp-uglify": "*",
-    "gulp": "*"
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "*"
   }
 }

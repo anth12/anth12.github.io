@@ -7,47 +7,82 @@
 
     {% include header.html %} 
     
-    
-<!-- Main -->
-<div id="main" class="alt">
+	<h1></h1>
+</header>
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>{{ page.title }}</h1>
-		</header>
-		{% if page.main_image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.main_image }}" alt="" /></span>{% endif %}
-		<p>{{ content }}</p>
-
-		{% if page.github %}
-			<div class="github">
-				<a href="https://github.com/anth12/{{ page.github }}" target="blank" class="button">
-					View on Github
-					<i class="icon fa-github"></i>
-				</a>			
+    <section class="main-header section" id="home" style="background-image: url(/{{ page.image }})">
+			<div class="home-static text-center slider-panel">
+				<h2 class="home-slider-title-main">{{ page.title }}</h2>
+				<div class="home-slider-title-small">{{ page.subTitle }}</div>
 			</div>
-		{% endif %}
-	</div>
-</section>
+			<div class="home-buttons text-center">
+				<a href="#content" class="btn btn-margin btn-lg  btn-primary">read on</a>
+				<a href="/#" class="btn btn-margin btn-lg  btn-default">home</a>
+			</div>
+		</section>
+	
+		<section class="about section" id="content">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-12 post-content">
+				<h2 class="text-center">{{ page.title }}</h2>
+				<p class="text-center inverse">{{ page.subTitle }}</p>
+
+				<p class="text-center">
+					<a href="{{ page.url }}" data-tooltip="">
+						<span class="ti-link"></span> permalink
+					</a>
+				</p>
+
+				<span class="post-entry-meta">
+				<img src="/assets/images/anthony.png" class="post-entry-author pull-left" alt="user avatar">
+				<span class="post-entry-author-name pull-left">Anthony Halliday</span>
+				<span class="post-entry-time pull-right">6 min read
+				<span class="post-entry-category">web design</span></span>
+				</span>
+
+				{{ content }}
+
+				{% if page.github %}
+				<div class="github">
+					<a href="https://github.com/anth12/{{ page.github }}" target="blank" class="button">
+						View on Github
+						<span class="ti-github"></i>
+					</a>			
+				</div>
+				{% endif %}
+			
+			</div>
+			</div>
+		</div>
+		</section>
 
 
 {% if page.comments %}
-<div class="content content-light">
-	<div class="inner">
-		<div id="disqus_thread"></div>
-		<script>
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = '//pixelforge.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<section class="text-center shadow section section-min">
+	<div id="about-counter" class="about-counter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 wow fadeInLeft about-counter-single" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInLeft;">
+					 
+						<div id="disqus_thread"></div>
+						<script>
+							(function() {
+							var d = document, s = d.createElement('script');
+							s.src = '//pixelforge.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+
 {% endif %}                         
 
 

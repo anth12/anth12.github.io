@@ -1,5 +1,51 @@
-<!-- Wrapper -->
-<div id="wrapper">
+<nav class="navbar navbar-fixed-top shadow">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/#home">
+				
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+
+				<!-- {% for node in site.pages %}
+		
+					{% if node.layout == "home" %}
+						
+						<li {% if page.url == node.url %} class="active"{% else %}>
+							<a href="{{node.url}}">{{node.title}}</a>
+						</li>
+						
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+				
+				{% for node in site.pages %}
+		
+					{% if node.nav-menu %}
+						{% if node.layout != "home" %}
+							{% if page.url == node.url %}
+								<li class="active"><a href="{{node.url}}">{{node.title}}</a></li>
+							{% else %}
+								<li><a href="{{node.url}}">{{node.title}}</a></li>
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				{% endfor %} -->
+
+				<li> <a href="#home">home</a> </li>
+				<li> <a href="#about">about</a> </li>
+				<li> <a href="#projects">work</a> </li>
+				<li> <a href="#posts">posts</a> </li>
+				<li> <a href="#contact">contact</a> </li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
 
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
@@ -12,33 +58,3 @@
 	</nav>
 </header>
 
-<!-- Menu -->
-<nav id="menu">
-	<ul class="links">
-
-		{% for node in site.pages %}
-		
-		    {% if node.layout == "home" %}
-				{% if page.url == node.url %}
-					<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
-				{% else %}
-					<li><a href="{{node.url}}">{{node.title}}</a></li>
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-
-		{% for node in site.pages %}
-
-			{% if node.nav-menu %}
-				{% if node.layout != "home" %}
-					{% if page.url == node.url %}
-						<li><a class="button special fit" href="{{node.url}}" class="active">{{node.title}}</a></li>
-					{% else %}
-						<li><a href="{{node.url}}">{{node.title}}</a></li>
-					{% endif %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-		
-	</ul>
-</nav>
