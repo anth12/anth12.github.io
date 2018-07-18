@@ -8,6 +8,7 @@ image: assets/images/reversion-home.jpg
 github: reversion
 comments: true
 categories: [3]
+readTime: 1
 ---
 
 ReVersin is a Windows desktop application written in WPF with C#.

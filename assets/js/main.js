@@ -357,24 +357,25 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function(){
 
-    $('.portfolio-thumbnail').on('click', function(e){
+    $('.remote-modal').on('click', function(e){
         
         e.preventDefault();
+        var $destination = $($(this).data('target'));
 
-        $('#post-model .post-entry-modal')
+        $destination.find('.remote-destination')
                 .html('<div class="logo-dots">'+
                             '<span class="dot-1"></span>'+
                             '<span class="dot-2"></span>'+
                             '<span class="dot-3"></span>'+
                         '</div>');
         
+        $destination.modal();
+
         $.get($(this).attr('href'), function(response){
 
-            var postHtml = $(response).find('.post-content');
-            $('#post-model .post-entry-modal').html(postHtml.html());
+            var postHtml = $(response).find('.remote-content');
+            $destination.find('.remote-destination').html(postHtml.html());
         });
-
-        $('#post-model').modal();
         
     });
 

@@ -3568,8 +3568,6 @@ dd, h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 
   /* Indicators active image style */ }
   .portfolio-introduction p {
     color: #aaa; }
-  .portfolio a {
-    border: none; }
   .portfolio-filter-label {
     display: block;
     width: 100%;
@@ -3686,6 +3684,12 @@ dd, h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 
   .portfolio .filtr-container {
     float: left;
     width: 100%; }
+
+.modal-only {
+  display: none; }
+
+.modal .modal-only {
+  display: initial; }
 
 .timeline {
   background: #262626; }
@@ -4584,7 +4588,6 @@ dd, h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 
   width: 100%; }
   .footer-logo {
     margin: 30px 0;
-    width: 220px;
     height: auto; }
 
 .portfolio-theme .about {

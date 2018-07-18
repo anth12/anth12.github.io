@@ -7,6 +7,7 @@ image: assets/images/excption-beutifier.png
 github: .net-exception-beautifier
 comments: true
 categories: [4]
+readTime: 1
 ---
 
 .net Exception Beutifier is a Web Browser plugin, written in Javscript, designed to `beutify` the .net Yellow Screen of Death (YSOD).

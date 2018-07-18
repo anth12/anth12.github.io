@@ -9,9 +9,7 @@
             color: $main-gray;
         }
     }
-    a {
-        border: none;
-    }
+    
     &-filter-label {
         display: block;
         width: 100%;
@@ -160,4 +158,12 @@
         float: left;
         width: 100%;
     }
+}
+
+.modal-only{
+    display: none;
+}
+
+.modal .modal-only{
+    display: initial;
 }

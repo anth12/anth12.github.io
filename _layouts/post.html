@@ -24,7 +24,9 @@
 		<section class="about section" id="content">
 			<div class="container">
 			<div class="row">
-			<div class="col-md-12 post-content">
+			<div class="col-md-12 remote-content">
+				<img src="/{{ page.image }}" class="modal-only img img-responsive"/>
+				
 				<h2 class="text-center">{{ page.title }}</h2>
 				<p class="text-center inverse">{{ page.subTitle }}</p>
 
@@ -35,17 +37,25 @@
 				</p>
 
 				<span class="post-entry-meta">
-				<img src="/assets/images/anthony.png" class="post-entry-author pull-left" alt="user avatar">
-				<span class="post-entry-author-name pull-left">Anthony Halliday</span>
-				<span class="post-entry-time pull-right">6 min read
-				<span class="post-entry-category">web design</span></span>
+					<img src="/assets/images/anthony.png" class="post-entry-author pull-left" alt="user avatar">
+					<span class="post-entry-author-name pull-left">Anthony Halliday</span>
+					<span class="post-entry-time pull-right">
+						{{ page.readTime }} min read
+					</span>
+						
+					<span class="post-entry-category">
+					{% for category in page.categories %}
+						<span>{{ category }}</span>
+					{% endfor %}
+					</span>
 				</span>
-
+				</span>
+<p></p>
 				{{ content }}
 
 				{% if page.github %}
 				<div class="github">
-					<a href="https://github.com/anth12/{{ page.github }}" target="blank" class="button">
+					<a href="https://github.com/anth12/{{ page.github }}" target="blank" class="btn btn-default">
 						View on Github
 						<span class="ti-github"></i>
 					</a>			

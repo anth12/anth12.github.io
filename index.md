@@ -81,8 +81,8 @@ nav-menu:
 					<div class="about-text-box">
 						<h3 class="wow fadeInRight">Out the office</h3>
 						<p class="wow fadeInRight" data-wow-delay=".4s">
-							In my spare time I enjoy learning about the latest development technologies &amp; frameworks, contributing to OS projects, and tinkering with Microcontrollers.
-							I am an avid year round rock climber, enjoying all variations of the sport from Traditional and Sport climbing, to Dry Tooling and the occasional Winter climb.
+							In my spare time I enjoy learning about the latest development technologies &amp; frameworks, contributing to OS projects, and tinkering with Microcontrollers. <br/><br/>
+							An avid year round rock climber, enjoying all variations of the sport from Traditional and Sport climbing, to Dry Tooling and the occasional Winter climb.
 							I am also a regular hill walker, mountain biker and during the winter months enjoy Skiing &amp; Snowboarding.
 						</p>
 					</div>
