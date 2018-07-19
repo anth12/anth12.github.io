@@ -253,7 +253,7 @@ $(".navbar-nav li a[href^='#']").on('click', function(e) {
 // place your api key in link to script  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 var map;
 var mapAddress = new google.maps.LatLng(35.870959, 14.513122);
-var mapCenter = new google.maps.LatLng(35.9454835, 14.371673025);
+var mapCenter = new google.maps.LatLng(48.32954203517551, 14.371673025000064);
 
 function initialize() {
 
@@ -323,7 +323,7 @@ function initialize() {
 
 
     var mapOptions = {
-        zoom: 11,
+        zoom: 4,
         scrollwheel: false,
         center: mapCenter,
         mapTypeControlOptions: {
@@ -370,13 +370,13 @@ $(function(){
                         '</div>');
         
         $destination.modal();
-
+setTimeout(function(){
         $.get($(this).attr('href'), function(response){
 
             var postHtml = $(response).find('.remote-content');
             $destination.find('.remote-destination').html(postHtml.html());
         });
-        
+    }, 5000)
     });
 
     $('.filtr-container').filterizr();
